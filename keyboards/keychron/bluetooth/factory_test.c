@@ -121,10 +121,11 @@ static inline void factory_reset_ind_timer_check(void) {
 
 void process_record_factory_reset(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case MO(1): /* fall through */
-        case MO(2):
-        case MO(3):
-        case MO(4):
+        //case MO(1): /* fall through */
+        //case MO(2):
+        //case MO(3):
+        //case MO(4):
+        case KC_LEFT:
             if (record->event.pressed) {
                 factory_reset_state |= KEY_PRESS_FN;
             } else {
